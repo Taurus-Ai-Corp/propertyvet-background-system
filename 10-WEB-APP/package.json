@@ -1,0 +1,58 @@
+{
+  "name": "taurus-propertyvet-saas",
+  "version": "1.0.0",
+  "description": "TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform",
+  "main": "backend/simple_server.js",
+  "scripts": {
+    "start": "node backend/simple_server.js",
+    "dev": "nodemon backend/simple_server.js",
+    "install-deps": "npm install --legacy-peer-deps",
+    "deploy": "npm run install-deps && npm start",
+    "test": "jest --testTimeout=30000",
+    "build": "echo 'Build complete for PropVet.TaurusAI.io deployment'",
+    "clean": "rm -rf node_modules package-lock.json && npm cache clean --force"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^6.11.2",
+    "helmet": "^6.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "nodemailer": "^6.9.15",
+    "stripe": "^16.12.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.15.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.1.3"
+  },
+  "overrides": {
+    "glob": "^10.0.0",
+    "inflight": "^1.0.6",
+    "superagent": "^10.2.2"
+  },
+  "keywords": [
+    "background-check",
+    "property-management",
+    "saas",
+    "ai-powered",
+    "tenant-screening"
+  ],
+  "author": "TAURUS AI Corp",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taas-ai/propertyvet-background-system.git"
+  },
+  "homepage": "https://propvet.taurusai.io"
+}

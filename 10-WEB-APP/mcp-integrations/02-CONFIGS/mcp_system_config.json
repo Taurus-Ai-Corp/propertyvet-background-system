@@ -1,0 +1,199 @@
+{
+  "system_config": {
+    "deployment_environment": "production",
+    "service_name": "TAURUS PropertyVet™ MCP System",
+    "version": "1.0.0",
+    "base_url": "https://propvet.taurusai.io"
+  },
+  "mcp_bridge": {
+    "port": 5000,
+    "host": "0.0.0.0",
+    "cors_origins": [
+      "https://propvet.taurusai.io",
+      "http://localhost:3000",
+      "http://127.0.0.1:3000"
+    ],
+    "rate_limiting": {
+      "enabled": true,
+      "max_requests_per_minute": 60,
+      "max_concurrent_requests": 20
+    },
+    "authentication": {
+      "required": true,
+      "api_key_header": "X-MCP-API-Key",
+      "jwt_validation": true
+    }
+  },
+  "agent_configurations": {
+    "chromedata_agent": {
+      "enabled": true,
+      "timeout": 300,
+      "max_concurrent_sessions": 3,
+      "chrome_options": {
+        "headless": true,
+        "no_sandbox": true,
+        "disable_dev_shm_usage": true
+      }
+    },
+    "perplexity_agent": {
+      "enabled": true,
+      "timeout": 180,
+      "model": "llama-3.1-sonar-large-128k-online",
+      "max_tokens": 4000,
+      "temperature": 0.1
+    },
+    "firecrawl_agent": {
+      "enabled": true,
+      "timeout": 240,
+      "max_pages_per_crawl": 50,
+      "concurrent_requests": 5
+    },
+    "github_agent": {
+      "enabled": true,
+      "timeout": 120,
+      "repository": "taurus-ai/propertyvet-saas",
+      "auto_deploy": true
+    },
+    "dev21_agent": {
+      "enabled": true,
+      "timeout": 90,
+      "monitoring_interval": 30,
+      "health_checks": true
+    },
+    "spiderfoot_agent": {
+      "enabled": true,
+      "timeout": 600,
+      "max_scan_time": 3600,
+      "concurrent_scans": 3
+    }
+  },
+  "workflow_configurations": {
+    "basic_background_check": {
+      "agents": ["chromedata", "firecrawl"],
+      "parallel_execution": true,
+      "timeout": 600,
+      "retry_attempts": 2,
+      "quality_threshold": 70
+    },
+    "standard_background_check": {
+      "agents": ["chromedata", "perplexity", "firecrawl"],
+      "parallel_execution": true,
+      "timeout": 1200,
+      "retry_attempts": 2,
+      "quality_threshold": 75
+    },
+    "comprehensive_background_check": {
+      "agents": ["chromedata", "perplexity", "firecrawl", "spiderfoot"],
+      "parallel_execution": true,
+      "timeout": 1800,
+      "retry_attempts": 3,
+      "quality_threshold": 80
+    },
+    "enterprise_background_check": {
+      "agents": ["chromedata", "perplexity", "firecrawl", "spiderfoot", "dev21"],
+      "parallel_execution": true,
+      "timeout": 2400,
+      "retry_attempts": 3,
+      "quality_threshold": 85
+    }
+  },
+  "performance_settings": {
+    "caching": {
+      "enabled": true,
+      "ttl": 3600,
+      "max_cache_size": 1000
+    },
+    "monitoring": {
+      "enabled": true,
+      "metrics_interval": 60,
+      "health_check_interval": 30,
+      "performance_alerts": true
+    },
+    "optimization": {
+      "load_balancing": true,
+      "auto_scaling": true,
+      "resource_limits": {
+        "cpu_threshold": 80,
+        "memory_threshold": 85,
+        "disk_threshold": 90
+      }
+    }
+  },
+  "security_settings": {
+    "encryption": {
+      "data_at_rest": true,
+      "data_in_transit": true,
+      "algorithm": "AES-256"
+    },
+    "access_control": {
+      "rbac_enabled": true,
+      "api_key_rotation": true,
+      "session_timeout": 3600
+    },
+    "compliance": {
+      "gdpr_compliant": true,
+      "ccpa_compliant": true,
+      "data_retention_days": 90
+    }
+  },
+  "database_settings": {
+    "connection_pool": {
+      "min_connections": 5,
+      "max_connections": 20,
+      "idle_timeout": 300
+    },
+    "backup": {
+      "enabled": true,
+      "frequency": "daily",
+      "retention_days": 30
+    }
+  },
+  "logging_settings": {
+    "level": "info",
+    "format": "json",
+    "rotation": {
+      "enabled": true,
+      "max_size": "100MB",
+      "max_files": 10
+    },
+    "destinations": ["console", "file", "syslog"]
+  },
+  "notification_settings": {
+    "email": {
+      "enabled": true,
+      "smtp_server": "smtp.sendgrid.net",
+      "templates": {
+        "workflow_complete": "template_workflow_complete",
+        "system_alert": "template_system_alert",
+        "error_notification": "template_error"
+      }
+    },
+    "webhook": {
+      "enabled": true,
+      "endpoints": [
+        "https://propvet.taurusai.io/api/webhooks/mcp"
+      ]
+    }
+  },
+  "integration_settings": {
+    "express_backend": {
+      "url": "http://localhost:3000",
+      "timeout": 30,
+      "retry_attempts": 3
+    },
+    "external_apis": {
+      "stripe": {
+        "enabled": true,
+        "webhook_endpoint": "/api/webhooks/stripe"
+      },
+      "sendgrid": {
+        "enabled": true,
+        "api_version": "v3"
+      },
+      "twilio": {
+        "enabled": true,
+        "api_version": "2010-04-01"
+      }
+    }
+  }
+}
