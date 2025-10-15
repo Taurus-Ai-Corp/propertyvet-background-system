@@ -1,0 +1,60 @@
+{
+  "equifax": {
+    "api_url": "https://api.equifax.com/business/credit/v1",
+    "api_key": "",
+    "secret_key": "",
+    "member_number": "",
+    "timeout": 30,
+    "retry_attempts": 3,
+    "rate_limit_per_minute": 60,
+    "sandbox_mode": true
+  },
+  "transunion": {
+    "api_url": "https://api.transunion.com/creditreporting/v2",
+    "api_key": "",
+    "secret_key": "",
+    "subscriber_id": "",
+    "timeout": 30,
+    "retry_attempts": 3,
+    "rate_limit_per_minute": 100,
+    "sandbox_mode": true
+  },
+  "experian": {
+    "api_url": "https://api.experian.com/businessinformation/businesses/v1",
+    "api_key": "",
+    "secret_key": "",
+    "subcode": "",
+    "timeout": 30,
+    "retry_attempts": 3,
+    "rate_limit_per_minute": 80,
+    "sandbox_mode": true
+  },
+  "security": {
+    "encryption_key": "",
+    "data_retention_days": 90,
+    "audit_logging": true,
+    "ssl_verification": true,
+    "max_concurrent_requests": 10
+  },
+  "compliance": {
+    "fcra_compliant": true,
+    "data_masking": true,
+    "consent_required": true,
+    "purpose_codes": [
+      "TENANT_SCREENING",
+      "EMPLOYMENT_SCREENING",
+      "INSURANCE_UNDERWRITING"
+    ],
+    "permissible_purposes": [
+      "3F - Tenant Screening",
+      "3E - Employment Purposes",
+      "3I - Insurance Underwriting"
+    ]
+  },
+  "monitoring": {
+    "health_check_interval": 300,
+    "error_threshold": 10,
+    "alert_endpoints": [],
+    "metrics_collection": true
+  }
+}

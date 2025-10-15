@@ -1,0 +1,198 @@
+{
+  "providers": {
+    "lexisnexis": {
+      "api_key": "",
+      "customer_id": "",
+      "endpoint": "https://api.lexisnexis.com/publicrecords/v2",
+      "rate_limit_per_minute": 100,
+      "enabled": true,
+      "timeout": 45
+    },
+    "thomson_reuters": {
+      "api_key": "",
+      "username": "",
+      "endpoint": "https://api.thomsonreuters.com/clear/v1",
+      "rate_limit_per_minute": 150,
+      "enabled": true,
+      "timeout": 45
+    },
+    "tracers": {
+      "api_key": "",
+      "user_id": "",
+      "endpoint": "https://api.tracersinfo.com/v3",
+      "rate_limit_per_minute": 200,
+      "enabled": true,
+      "timeout": 30
+    },
+    "courthouse_direct": {
+      "api_key": "",
+      "endpoint": "https://api.courtdirect.com/v2",
+      "rate_limit_per_minute": 80,
+      "enabled": true,
+      "timeout": 60
+    },
+    "pacer": {
+      "username": "",
+      "password": "",
+      "endpoint": "https://pcl.uscourts.gov/pcl/",
+      "enabled": true,
+      "cost_per_page": 0.10
+    }
+  },
+  "search_parameters": {
+    "default_radius_miles": 50,
+    "max_search_years": 10,
+    "include_aliases": true,
+    "include_associates": false,
+    "verification_level": "ENHANCED",
+    "max_concurrent_searches": 5,
+    "search_timeout_seconds": 120
+  },
+  "jurisdictions": {
+    "federal": {
+      "enabled": true,
+      "courts": ["DISTRICT", "APPEALS", "SUPREME", "BANKRUPTCY", "TAX"],
+      "data_sources": ["PACER", "RECAP"]
+    },
+    "state": {
+      "enabled": true,
+      "priority_states": ["CA", "NY", "TX", "FL", "GA", "IL", "PA", "OH"],
+      "court_types": ["CRIMINAL", "CIVIL", "FAMILY", "PROBATE", "TRAFFIC"]
+    },
+    "county": {
+      "enabled": true,
+      "record_types": ["CRIMINAL", "CIVIL", "PROPERTY", "LIENS", "JUDGMENTS"]
+    },
+    "municipal": {
+      "enabled": false,
+      "record_types": ["VIOLATIONS", "ORDINANCES"]
+    }
+  },
+  "data_sources": [
+    "PACER - Federal Court Records",
+    "State Court Systems",
+    "County Recorders",
+    "Property Tax Records",
+    "Business Registrations",
+    "Professional Licensing Boards",
+    "Sex Offender Registries",
+    "Bankruptcy Courts",
+    "UCC Filings",
+    "Lien Records"
+  ],
+  "record_types": {
+    "criminal": {
+      "enabled": true,
+      "severity_levels": ["FELONY", "MISDEMEANOR", "INFRACTION"],
+      "include_arrests": true,
+      "include_convictions": true,
+      "include_dismissed": false
+    },
+    "civil": {
+      "enabled": true,
+      "case_types": ["JUDGMENTS", "LIENS", "BANKRUPTCY", "DIVORCE", "CUSTODY"],
+      "minimum_amount": 1000
+    },
+    "property": {
+      "enabled": true,
+      "include_ownership": true,
+      "include_tax_records": true,
+      "include_liens": true,
+      "include_foreclosures": true
+    },
+    "business": {
+      "enabled": true,
+      "registration_types": ["CORPORATION", "LLC", "PARTNERSHIP", "SOLE_PROPRIETORSHIP"],
+      "include_inactive": false
+    },
+    "professional_licenses": {
+      "enabled": true,
+      "license_types": [
+        "MEDICAL", "LEGAL", "REAL_ESTATE", "INSURANCE",
+        "ACCOUNTING", "ENGINEERING", "CONTRACTING", "EDUCATION"
+      ],
+      "include_disciplinary_actions": true
+    }
+  },
+  "state_integrations": {
+    "georgia": {
+      "criminal_records": "https://gbi.georgia.gov/api/criminal",
+      "business_records": "https://corp.sos.ga.gov/api/search",
+      "property_records": "https://tax.assessor.ga.gov/api/property",
+      "enabled": true
+    },
+    "florida": {
+      "criminal_records": "https://fdle.state.fl.us/api/criminal",
+      "business_records": "https://dos.myflorida.com/api/sunbiz",
+      "property_records": "https://paopropertyappraiser.com/api",
+      "enabled": true
+    },
+    "california": {
+      "criminal_records": "https://oag.ca.gov/api/criminal",
+      "business_records": "https://bizfileonline.sos.ca.gov/api",
+      "property_records": "https://assessor.lacounty.gov/api",
+      "enabled": true
+    },
+    "texas": {
+      "criminal_records": "https://records.txdps.state.tx.us/api",
+      "business_records": "https://www.sos.state.tx.us/api/corp",
+      "property_records": "https://www.hcad.org/api",
+      "enabled": true
+    }
+  },
+  "sex_offender_registries": {
+    "national": {
+      "nsopw": {
+        "endpoint": "https://www.nsopw.gov/api/search",
+        "enabled": true
+      }
+    },
+    "state_registries": {
+      "all_states": true,
+      "real_time_verification": true
+    }
+  },
+  "risk_scoring": {
+    "weights": {
+      "felony_conviction": 50,
+      "misdemeanor_conviction": 20,
+      "pending_charges": 30,
+      "civil_judgment": 15,
+      "bankruptcy": 25,
+      "lien": 10,
+      "sex_offender": 100,
+      "recent_activity_multiplier": 1.5
+    },
+    "risk_levels": {
+      "minimal": { "score_range": [0, 0], "recommendation": "APPROVE" },
+      "low": { "score_range": [1, 24], "recommendation": "APPROVE_STANDARD" },
+      "medium": { "score_range": [25, 49], "recommendation": "APPROVE_ENHANCED" },
+      "high": { "score_range": [50, 99], "recommendation": "CONDITIONAL_APPROVAL" },
+      "very_high": { "score_range": [100, 999], "recommendation": "REJECT" }
+    }
+  },
+  "compliance": {
+    "fcra_compliant": true,
+    "adverse_action_notices": true,
+    "consumer_rights_disclosure": true,
+    "permissible_purposes": [
+      "TENANT_SCREENING",
+      "EMPLOYMENT_SCREENING", 
+      "INSURANCE_UNDERWRITING",
+      "LEGITIMATE_BUSINESS_NEED"
+    ]
+  },
+  "security": {
+    "encryption_at_rest": true,
+    "encryption_in_transit": true,
+    "data_retention_days": 2555,
+    "audit_logging": true,
+    "access_controls": "RBAC"
+  },
+  "monitoring": {
+    "health_check_interval": 300,
+    "error_threshold": 5,
+    "performance_metrics": true,
+    "alert_endpoints": []
+  }
+}
