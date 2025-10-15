@@ -22,7 +22,7 @@
 ```yaml
 Status: ✅ READY TO PUSH
 Local Branch: main
-Remote URL: https://github.com/Taas-ai/propertyvet-background-system.git
+Remote URL: https://github.com/Taurus-AI/propertyvet-background-system.git
 Total Commits: 7 professional commits
 Total Files: 38 organized files
 Code Lines: 5,000+ production-ready
@@ -194,7 +194,7 @@ Year 1: 500+ clients ($50K-$200K MRR)
 2. Fill in:
    ```
    Repository name: propertyvet-background-system
-   Owner: Taas-ai (or your personal account if no org access)
+   Owner: Taurus-AI (or your personal account if no org access)
    Description: TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform
    Visibility: Private ✅ (recommended for proprietary code)
    Initialize: DO NOT CHECK ANY BOXES ❌
@@ -205,7 +205,7 @@ Year 1: 500+ clients ($50K-$200K MRR)
 ```bash
 brew install gh
 gh auth login
-gh repo create Taas-ai/propertyvet-background-system \
+gh repo create Taurus-AI/propertyvet-background-system \
   --private \
   --description "TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform"
 ```
@@ -221,7 +221,7 @@ bash PUSH_TO_GITHUB.sh
 
 ### **STEP 3: Verify Push Success**
 
-Visit: https://github.com/Taas-ai/propertyvet-background-system
+Visit: https://github.com/Taurus-AI/propertyvet-background-system
 
 Verify:
 - ✅ All 7 commits appear
@@ -460,5 +460,5 @@ Upon successful push, the platform will be immediately ready for Vercel deployme
 *Document Generated: October 15, 2025*  
 *TAURUS AI Corp. - CEO Command System*  
 *PropertyVet™ Background Check SaaS Platform*  
-*Repository: https://github.com/Taas-ai/propertyvet-background-system.git*
+*Repository: https://github.com/Taurus-AI/propertyvet-background-system.git*
 

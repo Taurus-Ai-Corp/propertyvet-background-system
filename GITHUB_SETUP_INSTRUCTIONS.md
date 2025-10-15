@@ -3,7 +3,7 @@
 ## ✅ CURRENT STATUS
 Your PropertyVet™ system is **READY TO PUSH** to GitHub!
 
-- **Repository URL**: `https://github.com/Taas-ai/propertyvet-background-system.git`
+- **Repository URL**: `https://github.com/Taurus-AI/propertyvet-background-system.git`
 - **Local Git**: ✅ Initialized
 - **Commits Ready**: ✅ 4 commits prepared
 - **Files Ready**: ✅ 5,000+ lines of production code
@@ -16,7 +16,7 @@ Your PropertyVet™ system is **READY TO PUSH** to GitHub!
 ### **Option A: Using GitHub Web Interface (RECOMMENDED)**
 
 1. **Go to**: https://github.com/new
-   - Or if you have access to Taas-ai organization: https://github.com/organizations/Taas-ai/repositories/new
+   - Or if you have access to Taurus-AI organization: https://github.com/organizations/Taurus-AI/repositories/new
 
 2. **Fill in the form**:
    ```
@@ -38,7 +38,7 @@ brew install gh
 gh auth login
 
 # Create repository
-gh repo create Taas-ai/propertyvet-background-system --private --description "TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform"
+gh repo create Taurus-AI/propertyvet-background-system --private --description "TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform"
 ```
 
 ---
@@ -130,7 +130,7 @@ propertyvet-background-system/
 
 After pushing, verify at:
 ```
-https://github.com/Taas-ai/propertyvet-background-system
+https://github.com/Taurus-AI/propertyvet-background-system
 ```
 
 You should see:
@@ -177,7 +177,7 @@ https://propvet.taurusai.io
 - **Fix**: Run `git pull origin main --rebase` then `git push`
 
 ### **Issue: "Organization not found"**
-- **Cause**: `Taas-ai` organization doesn't exist or you don't have access
+- **Cause**: `Taurus-AI` organization doesn't exist or you don't have access
 - **Fix**: Use your personal GitHub account instead:
   ```bash
   git remote set-url origin https://github.com/YOUR_USERNAME/propertyvet-background-system.git

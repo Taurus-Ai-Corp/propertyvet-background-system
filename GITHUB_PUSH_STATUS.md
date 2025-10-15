@@ -20,7 +20,7 @@
 ### **Git Repository Configuration**:
 ```bash
 Local Branch: main
-Remote URL: https://github.com/Taas-ai/propertyvet-background-system.git
+Remote URL: https://github.com/Taurus-AI/propertyvet-background-system.git
 Status: ✅ All changes committed
 Commits Ready: 5 commits
 ```
@@ -42,14 +42,14 @@ c0387ae 🎯 Initial commit: Repository foundation with documentation
 
 You mentioned you created a new repo at:
 ```
-https://github.com/Taas-ai/propertyvet-background-system.git
+https://github.com/Taurus-AI/propertyvet-background-system.git
 ```
 
 **If NOT created yet**, please create it:
 
 #### **Method A: Web Interface (Easiest)**
 1. Go to: https://github.com/new
-   - Or for organization: https://github.com/organizations/Taas-ai/repositories/new
+   - Or for organization: https://github.com/organizations/Taurus-AI/repositories/new
 2. Repository name: `propertyvet-background-system`
 3. Description: `TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform`
 4. Visibility: ✅ **Private** (recommended for proprietary code)
@@ -65,7 +65,7 @@ brew install gh
 gh auth login
 
 # Create repo
-gh repo create Taas-ai/propertyvet-background-system \
+gh repo create Taurus-AI/propertyvet-background-system \
   --private \
   --description "TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform ($7.6M+ Revenue)"
 ```
@@ -161,7 +161,7 @@ After pushing to GitHub, verify:
 - [ ] Repository is set to Private
 - [ ] No sensitive data exposed in commits
 
-**View at**: https://github.com/Taas-ai/propertyvet-background-system
+**View at**: https://github.com/Taurus-AI/propertyvet-background-system
 
 ---
 
@@ -210,7 +210,7 @@ git push -u origin main
 ```
 
 ### **Organization Access Issues**:
-**Cause**: Don't have access to Taas-ai organization  
+**Cause**: Don't have access to Taurus-AI organization  
 **Alternative**: Use personal GitHub account:
 ```bash
 git remote set-url origin https://github.com/YOUR_USERNAME/propertyvet-background-system.git
@@ -273,7 +273,7 @@ bash PUSH_TO_GITHUB.sh
 ## 🚀 EXECUTIVE SUMMARY
 
 **Status**: ✅ READY TO PUSH  
-**Repository**: https://github.com/Taas-ai/propertyvet-background-system.git  
+**Repository**: https://github.com/Taurus-AI/propertyvet-background-system.git  
 **Action Required**: Create GitHub repository, then execute push  
 **Expected Time**: < 5 minutes to push, < 1 hour to production  
 **Revenue Impact**: $7.6M-$12.8M annual potential  

@@ -16,7 +16,7 @@ Fill in:
 ```
 Repository name: propertyvet-background-system
 Description: TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform
-Owner: Taas-ai (or your username if you don't have access to Taas-ai org)
+Owner: Taurus-AI (or your username if you don't have access to Taurus-AI org)
 Visibility: Private ✅
 DO NOT INITIALIZE: Leave all checkboxes unchecked ❌
 ```
@@ -46,7 +46,7 @@ gh auth login
 cd "/Users/user/Documents/TAURUS AI Corp./CURSOR Projects/TAURUS-AI-CORP-PORTFOLIO/03-REVENUE-SYSTEMS/PROPERTYVET-BACKGROUND-SYSTEM"
 
 # Create repository
-gh repo create Taas-ai/propertyvet-background-system \
+gh repo create Taurus-AI/propertyvet-background-system \
   --private \
   --description "TAURUS PropertyVet™ - AI-Powered Background Check SaaS Platform" \
   --source . \
@@ -111,7 +111,7 @@ c0387ae 🎯 Initial commit: Repository foundation with documentation
 After successful push, you'll see:
 ```
 ✅ SUCCESS! Repository pushed to GitHub!
-🌐 View at: https://github.com/Taas-ai/propertyvet-background-system
+🌐 View at: https://github.com/Taurus-AI/propertyvet-background-system
 📊 Repository Statistics:
 - Files: 50+ files
 - Commits: 6 commits
@@ -149,7 +149,7 @@ https://propvet.taurusai.io
 - Try pushing again, enter credentials when prompted
 
 ### **Error: "Organization not found"**
-- Don't have access to Taas-ai organization
+- Don't have access to Taurus-AI organization
 - Use Method 3 with your personal account
 
 ---
@@ -173,7 +173,7 @@ cat GITHUB_COMMIT_PLAN.md
 
 1. **Go to**: https://github.com/new
 2. **Name**: `propertyvet-background-system`
-3. **Owner**: `Taas-ai` (or your username)
+3. **Owner**: `Taurus-AI` (or your username)
 4. **Private**: ✅ Yes
 5. **Initialize**: ❌ No
 6. **Click**: "Create repository"
