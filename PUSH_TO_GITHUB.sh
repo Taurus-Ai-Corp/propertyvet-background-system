@@ -2,7 +2,7 @@
 
 # TAURUS PropertyVet™ - Push to GitHub Script
 echo "🚀 Pushing TAURUS PropertyVet™ to GitHub..."
-echo "Repository: https://github.com/Taas-ai/propertyvet-background-system"
+echo "Repository: https://github.com/Taurus-AI/propertyvet-background-system"
 echo "=================================================="
 
 cd "/Users/user/Documents/TAURUS AI Corp./CURSOR Projects/TAURUS-AI-CORP-PORTFOLIO/03-REVENUE-SYSTEMS/PROPERTYVET-BACKGROUND-SYSTEM"
@@ -22,7 +22,7 @@ git push -u origin main
 if [ $? -eq 0 ]; then
     echo ""
     echo "✅ SUCCESS! Repository pushed to GitHub!"
-    echo "🌐 View at: https://github.com/Taas-ai/propertyvet-background-system"
+    echo "🌐 View at: https://github.com/Taurus-AI/propertyvet-background-system"
     echo ""
     echo "📊 Repository Statistics:"
     echo "- Files: $(find . -name "*.py" -o -name "*.js" -o -name "*.html" -o -name "*.json" | wc -l | tr -d ' ') files"
@@ -37,7 +37,7 @@ if [ $? -eq 0 ]; then
 else
     echo ""
     echo "❌ Push failed. Please check:"
-    echo "1. GitHub repository exists at: https://github.com/Taas-ai/propertyvet-background-system"
+    echo "1. GitHub repository exists at: https://github.com/Taurus-AI/propertyvet-background-system"
     echo "2. You have push permissions to the repository"
     echo "3. Repository is private as requested"
 fi
