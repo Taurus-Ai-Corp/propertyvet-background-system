@@ -271,6 +271,8 @@ class CreditBureauAgent:
         
         # Make API request
         try:
+            if self.session is None:
+                raise RuntimeError("HTTP session is not initialized")
             async with self.session.post(
                 f"{config['api_url']}/creditcheck",
                 json=payload,
