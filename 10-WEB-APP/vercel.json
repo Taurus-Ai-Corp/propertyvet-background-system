@@ -1,15 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "backend/simple_server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "frontend/**",
-      "use": "@vercel/static"
+  "functions": {
+    "backend/simple_server.js": {
+      "runtime": "nodejs18.x",
+      "maxDuration": 30
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
@@ -23,10 +18,5 @@
   "env": {
     "NODE_ENV": "production",
     "DOMAIN": "propvet.taurusai.io"
-  },
-  "functions": {
-    "backend/simple_server.js": {
-      "maxDuration": 30
-    }
   }
 }
