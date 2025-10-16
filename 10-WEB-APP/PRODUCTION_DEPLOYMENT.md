@@ -1,35 +1,72 @@
 # 🌐 TAURUS PropertyVet™ - PRODUCTION DEPLOYMENT GUIDE
-## PropVet.TaurusAI.io Live Deployment
+## Deploy to `https://propvet.taurusai.io` in 15 Minutes
 
 ---
 
-## 🎯 **IMMEDIATE PRODUCTION STEPS**
+## 🎯 **RECOMMENDED: VERCEL DEPLOYMENT**
 
-### **1. NAMECHEAP DOMAIN CONFIGURATION**
+**Why Vercel?**
+- ✅ Deploy in 15 minutes (not hours)
+- ✅ Free tier perfect for launch
+- ✅ Automatic SSL certificates
+- ✅ Global CDN (faster worldwide)
+- ✅ Auto-scaling infrastructure
+- ✅ Zero server management
+- ✅ Same domain: `propvet.taurusai.io`
 
-**Login to Namecheap Dashboard:**
-- Domain: `TaurusAI.io`
-- Create Subdomain: `PropVet.TaurusAI.io`
-
-**DNS Configuration:**
-```
-Type: A Record
-Host: PropVet
-Value: [YOUR_SERVER_IP]
-TTL: Automatic
-```
-
-**Alternative CNAME Setup:**
-```
-Type: CNAME
-Host: PropVet
-Value: your-app-name.herokuapp.com (if using Heroku)
-TTL: Automatic
-```
+**📖 Complete Guide:** See `VERCEL_DEPLOYMENT_GUIDE.md` for detailed step-by-step instructions
 
 ---
 
-## 🚀 **CLOUD HOSTING OPTIONS (Choose One)**
+## ⚡ **QUICK START (5 Minutes)**
+
+### **Step 1: Deploy to Vercel**
+
+1. **Via Vercel Dashboard:**
+   - Go to: https://vercel.com
+   - Click **"New Project"**
+   - Import GitHub: `Taurus-Ai-Corp/propertyvet-background-system`
+   - Root Directory: `10-WEB-APP`
+   - Click **"Deploy"**
+
+2. **Via CLI:**
+   ```bash
+   npm install -g vercel
+   cd 10-WEB-APP
+   vercel --prod
+   ```
+
+### **Step 2: Configure Namecheap DNS**
+
+1. **Login to Namecheap:**
+   - Go to Domain List → `TaurusAI.io` → Manage
+   - Click **"Advanced DNS"** tab
+
+2. **Add CNAME Record:**
+   ```yaml
+   Type: CNAME Record
+   Host: PropVet
+   Value: cname.vercel-dns.com
+   TTL: Automatic
+   ```
+
+3. **Save Changes**
+
+### **Step 3: Add Domain in Vercel**
+
+1. Go to Vercel project → **Settings** → **Domains**
+2. Add: `propvet.taurusai.io`
+3. Wait 1-5 minutes for verification
+
+### **Step 4: Verify & Launch**
+
+- Visit: https://propvet.taurusai.io
+- Test: https://propvet.taurusai.io/api/health
+- ✅ **YOU'RE LIVE!**
+
+---
+
+## 🚀 **ALTERNATIVE DEPLOYMENT OPTIONS**
 
 ### **OPTION 1: VERCEL (Recommended - Instant)**
 ```bash
