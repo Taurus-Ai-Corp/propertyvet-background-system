@@ -1,7 +1,6 @@
 {
   "functions": {
     "backend/simple_server.js": {
-      "runtime": "nodejs18.x",
       "maxDuration": 30
     }
   },
