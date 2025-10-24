@@ -1,0 +1,52 @@
+# 🤖 Dependabot Configuration
+# Automated dependency updates for TAURUS PropertyVet
+
+version: 2
+updates:
+  # Node.js Dependencies (npm)
+  - package-ecosystem: "npm"
+    directory: "/10-WEB-APP"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "Taurus-ai"
+    assignees:
+      - "Taurus-ai"
+    labels:
+      - "dependencies"
+      - "security"
+      - "automated"
+    commit-message:
+      prefix: "🔄 deps"
+      prefix-development: "🔄 deps-dev"
+      include: "scope"
+    # Security updates only (comment out to include all updates)
+    # open-pull-requests-limit: 0
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    commit-message:
+      prefix: "🔄 actions"
+    labels:
+      - "github-actions"
+      - "dependencies"
+
+# Dependabot Security Updates Configuration
+# Automatically create PRs for security vulnerabilities
+
+# Auto-merge strategy (configured in GitHub Actions):
+# - Patch updates: Auto-approve and auto-merge
+# - Minor updates: Auto-approve, manual merge
+# - Major updates: Manual review required
+
+# Alert preferences:
+# - Critical/High: Immediate notification
+# - Moderate/Low: Daily digest
