@@ -1,0 +1,73 @@
+# TAURUS AI Corp - Multi-License Agreement
+
+Copyright (c) 2024-2025 TAURUS AI Corp. All Rights Reserved.
+
+## License Overview
+
+This software is available under multiple license tiers. Your use of this software
+is governed by the license tier applicable to your use case:
+
+### Tier 0: MIT License (Core Components)
+Basic utilities, documentation, and examples are available under the MIT License.
+See `LICENSE-MIT.md` for full terms.
+
+### Tier 1: FSL (Functional Source License) - Community
+Community packages with non-commercial use rights. Converts to MIT after 2 years.
+See `LICENSE-FSL.md` for full terms.
+
+### Tier 2: BSL (Business Source License) - Professional
+Professional packages with commercial use rights and usage limitations.
+Converts to MIT after 3 years.
+See `LICENSE-BSL.md` for full terms.
+
+### Tier 3: Commercial License - Enterprise
+Full commercial rights with dedicated support and custom SLAs.
+Contact: licensing@taurusai.io
+See `LICENSE-COMMERCIAL.md` for full terms.
+
+### Tier 4: White-Label / OEM License
+Full white-label and reseller rights for partners.
+Contact: partners@taurusai.io
+See `LICENSE-WHITE-LABEL.md` for full terms.
+
+## Quick Reference
+
+| Use Case | License | Cost |
+|----------|---------|------|
+| Personal/Learning | FSL | Free |
+| Open Source Projects | FSL | Free |
+| Startups (<$100K revenue) | FSL | Free |
+| Commercial (Small) | BSL | $99-299/mo |
+| Commercial (Enterprise) | Commercial | $999-4,999/mo |
+| White-Label/OEM | OEM | Custom |
+
+## Default License
+
+Unless otherwise specified, the default license for this repository is:
+**Functional Source License (FSL) 1.1 with MIT Future License**
+
+This means:
+- ✅ Free for non-commercial use
+- ✅ Free for personal projects
+- ✅ Free for open source contributions
+- ✅ Becomes MIT licensed after 2 years
+- ❌ Commercial use requires a paid license
+
+## Contributing
+
+By contributing to this project, you agree to our Contributor License Agreement (CLA).
+See `CLA-INDIVIDUAL.md` or `CLA-CORPORATE.md` in the docs/licensing directory.
+
+## Contact
+
+- Licensing: licensing@taurusai.io
+- Enterprise Sales: sales@taurusai.io
+- Partnerships: partners@taurusai.io
+- General: admin@taurusai.io
+
+## Links
+
+- Website: https://taurusai.io
+- Documentation: https://docs.taurusai.io
+- GitHub: https://github.com/Taurus-Ai-Corp
+- Sponsor: https://github.com/sponsors/Taurus-Ai-Corp

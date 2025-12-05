@@ -1,0 +1,32 @@
+# GitHub Sponsors Configuration for TAURUS AI Corp
+# This file enables the "Sponsor" button on your GitHub repository
+
+# GitHub Sponsors
+github: [Taurus-Ai-Corp]
+
+# Open Collective
+open_collective: taurus-ai
+
+# Custom URLs
+custom: ['https://taurusai.io/sponsor', 'https://buy.stripe.com/taurus-ai-sponsor']
+
+# Ko-fi
+ko_fi: taurusai
+
+# Patreon
+patreon: taurusai
+
+# Community Bridge (Linux Foundation)
+community_bridge: taurus-ai
+
+# Liberapay
+liberapay: taurusai
+
+# IssueHunt
+issuehunt: Taurus-Ai-Corp
+
+# Tidelift
+tidelift: npm/taurus-ai
+
+# Buy Me a Coffee
+# Note: GitHub Sponsors is preferred, but this provides alternatives
