@@ -1,3 +1,9 @@
+<!-- TAURUS AI Badges -->
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/Taurus-Ai-Corp?style=flat-square&logo=github&color=EA4AAA)](https://github.com/sponsors/Taurus-Ai-Corp)
+[![License](https://img.shields.io/badge/License-FSL%201.1-blue?style=flat-square)](LICENSE)
+[![Website](https://img.shields.io/badge/Website-taurusai.io-green?style=flat-square)](https://taurusai.io)
+<!-- /TAURUS AI Badges -->
+
 # 🏠 TAURUS PropertyVet™ - AI-Powered Background Check System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -269,3 +275,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **🏠 TAURUS PropertyVet™ - Revolutionizing Property Management Background Checks**
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/taas-ai/propertyvet-background-system)
+
+---
+
+## 💖 Support This Project
+
+If you find this project useful, please consider sponsoring:
+
+[![Sponsor TAURUS AI](https://img.shields.io/badge/Sponsor-TAURUS%20AI-EA4AAA?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/Taurus-Ai-Corp)
+
+Your sponsorship helps us maintain and improve our open-source projects.
+
+---
+
+**TAURUS AI Corp** | [Website](https://taurusai.io) | [GitHub](https://github.com/Taurus-Ai-Corp) | [Contact](mailto:admin@taurusai.io)
+
